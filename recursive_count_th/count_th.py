@@ -5,6 +5,15 @@ Your function must utilize recursion. It cannot contain any loops.
 '''
 def count_th(word):
     
-    # TBC
+    if "th" in word:
+        begindex = (word.index("th")) + 2
+        count = (count_th(word[begindex:len(word)])) + 1
+        return count
+    else:
+        return 0
+    return count
     
-    pass
+
+
+
+print(count_th("there are many things in the thought of this then."))
